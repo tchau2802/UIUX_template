@@ -10,6 +10,8 @@ body {
   --color-gray: #8a8a8a;
   --color-white: #fff;
   --color-royalblue: #0077ff;
+  --color-lightblue: #f0f7ff;
+  --color-green: #4caf50;
   --gap-3xs: 10px;
   --gap-sm: 14px;
   --padding-12xs: 1px;
@@ -42,7 +44,6 @@ body {
   height: 36px;
   width: 36px;
   margin-right: 10px; /* Space between logo and text */
-  /* margin-bottom: 30px; */
 }
 
 .kpi-edu {
@@ -52,7 +53,6 @@ body {
 }
 
 .menu-items {
-  margin-top: 50px;
   flex-grow: 1;
 }
 
@@ -61,10 +61,12 @@ body {
   align-items: center;
   padding: 10px 20px; /* Adjusted padding */
   cursor: pointer;
+  position: relative;
 }
 
 .menu-item img.icon {
   margin-right: 10px;
+  filter: grayscale(100%); /* Initial grayscale filter */
 }
 
 .menu-item a {
@@ -73,8 +75,32 @@ body {
   text-decoration: none;
 }
 
-.menu-item:hover {
-  background-color: #f0f7ff;
+.menu-item:hover,
+.menu-item.active {
+  background-color: var(--color-lightblue);
+}
+
+.menu-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: var(--color-royalblue);
+}
+
+.menu-item.active img.icon {
+  filter: none; /* Remove grayscale filter */
+}
+
+.menu-item.active a {
+  color: var(--color-royalblue);
+}
+
+.menu-item.inactive img.icon,
+.menu-item.inactive a {
+  color: var(--color-gray);
 }
 
 .notification-count {
