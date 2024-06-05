@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  line-height: normal;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f4f9; /* Adjust background for visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chart-container {
+  width: 250px; /* Adjust width as needed */
+  height: 250px; /* Adjust height as necessary */
+  background-color: #fff;
+  border-radius: 20px; /* Rounded corners */
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.percentage-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}

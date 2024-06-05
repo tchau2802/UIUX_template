@@ -1,0 +1,14 @@
+.chart-container {
+  width: 90%; /* Adjust width for a wider x-axis */
+  height: 60vh; /* Adjust height as necessary */
+  margin: auto;
+  padding-top: 50px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+}
