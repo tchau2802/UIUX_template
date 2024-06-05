@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: var(--font-open-sans);
+}
+
+:root {
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-ubuntu: "Ubuntu", sans-serif;
+  --font-size-xl: 20px;
+  --color-gray: #8a8a8a;
+  --color-white: #fff;
+  --color-royalblue: #0077ff;
+  --gap-3xs: 10px;
+  --gap-sm: 14px;
+  --padding-12xs: 1px;
+  --padding-xl: 20px;
+  --padding-7xs: 6px;
+  --br-11xl: 30px;
+}
+
+.left-bar-home-parent {
+  display: flex;
+  height: 100vh;
+}
+
+.left-bar-home {
+  width: 250px; /* Adjusted width */
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-child {
+  height: 36px;
+  width: 36px;
+  margin-right: 10px; /* Space between logo and text */
+  /* margin-bottom: 30px; */
+}
+
+.kpi-edu {
+  font-family: var(--font-ubuntu);
+  font-size: 22px;
+  color: var(--color-royalblue);
+}
+
+.menu-items {
+  margin-top: 50px;
+  flex-grow: 1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; /* Adjusted padding */
+  cursor: pointer;
+}
+
+.menu-item img.icon {
+  margin-right: 10px;
+}
+
+.menu-item a {
+  font-size: 18px;
+  color: var(--color-gray);
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background-color: #f0f7ff;
+}
+
+.notification-count {
+  background-color: var(--color-royalblue);
+  color: var(--color-white);
+  border-radius: 50%;
+  padding: 5px 10px; /* Adjusted padding to make it circular */
+  margin-left: auto;
+}
+
+.sign-out-wrapper {
+  padding: 20px;
+}
+
+.sign-out {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #e55858;
+}
+
+.sign-out img.icon {
+  margin-right: 10px;
+}
+
+/* Additional spacing between logo and Home */
+.logo-wrapper + .menu-items .menu-item.home {
+  margin-top: 20px; /* Adjust the spacing as needed */
+}
